@@ -1,0 +1,35 @@
+$padding: 5px;
+
+body {
+    display: flex;
+    justify-content: center;
+
+    ul {
+        padding: 0;
+        background-color: rgb(174, 202, 165);
+    }
+
+    li {
+        font-weight: bold;
+        list-style-type: none;
+        text-transform: capitalize;
+        padding: $padding;
+    }
+    
+    li:nth-child(n) {
+        cursor:pointer;
+        transition: transform 1s, background-color 1s, color 1s;
+        // color:green;
+
+        &:hover {
+            transform: translateX(+10px);
+            background-color: orange;
+            color: red;
+        }
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+}
